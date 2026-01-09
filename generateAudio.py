@@ -1,27 +1,13 @@
 #!/usr/bin/env python3
+
 """
-generateAudio.py
+ _______                      _____           _     _                      _   _
+|__   __|                    |  __ \         | |   | |                    | | (_)
+   | |_ __ _   _  ___        | |__) | __ ___ | |__ | | ___ _ __ ___   __ _| |_ _  ___
+   | | '__| | | |/ _ \       |  ___/ '__/ _ \| '_ \| |/ _ \ '_ ` _ \ / _` | __| |/ __|
+   | | |  | |_| |  __/       | |   | | | (_) | |_) | |  __/ | | | | | (_| | |_| | (__
+   |_|_|   \__,_|\___|       |_|   |_|  \___/|_.__/|_|\___|_| |_| |_|\__,_|\__|_|\___|
 
-What it does
-1) Ensures a subfolder named "Media" exists next to this script.
-2) Finds every .csv file in the same folder as this script.
-3) For each row, assumes the first two CSV fields are HTML strings (front, back).
-4) Extracts the text inside the first <h1> tag from each side (if present).
-5) Uses Google Translate TTS (via gTTS) to generate an MP3 for each extracted <h1> text.
-6) Saves MP3 files into the Media folder with names like:
-   LLJ_<romanized_h1_text>_<4 hex>.mp3
-7) Appends a matching [sound:filename.mp3] to the end of each side so Anki can play audio.
-
-Requirements
-- Python 3.8+
-- Internet access (gTTS calls Google)
-- pip packages: gTTS, beautifulsoup4, pykakasi
-
-Install
-  python -m pip install gTTS beautifulsoup4 pykakasi
-
-Run
-  python generateAudio.py
 """
 
 from __future__ import annotations

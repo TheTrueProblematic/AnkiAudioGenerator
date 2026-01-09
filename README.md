@@ -231,23 +231,15 @@ You can restore it by renaming:
    2. A random 4 character hex suffix is added to prevent collisions
 5. It appends a `<br>[sound:filename.mp3]` tag to the end of each HTML field so Anki will play the audio.
 
-***
-
-## Copyright
-
-Add this footer at the bottom of your pages and include the JavaScript snippet so the year auto updates.
-
-HTML:
-```html
-<footer>
-    <a href="https://maximilianmcclelland.com" style="text-decoration: none; color:black;">
+<footer style="text-align: center;">
+    <a href="https://maximilianmcclelland.com" 
+       style="text-decoration: none; 
+              font-weight: bold;
+              background: linear-gradient(to right, #ff75c3, #04befe);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              display: inline-block;">
         TrueProblematic © <span id="footer-year"></span>
     </a>
 </footer>
-```
 
-JavaScript:
-```javascript
- // Update the footer with the current year.
- document.getElementById("footer-year").innerText = new Date().getFullYear();
-```
